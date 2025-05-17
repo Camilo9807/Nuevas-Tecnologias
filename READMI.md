@@ -1,184 +1,47 @@
-Introducción
+```markdown
+# Proyecto de Python: Configuración Paso a Paso
 
-"App Web Coches Eléctricos" es una aplicación web interactiva diseñada para analizar y visualizar datos de coches eléctricos registrados. Utiliza un archivo CSV (registros_carros_electricos.csv) como fuente de datos, permitiendo a los usuarios filtrar información y explorar estadísticas a través de tablas y gráficos.
+Este proyecto de Python fue configurado siguiendo los pasos detallados a continuación. Aquí se explica cómo se creó el entorno virtual, se instalaron las dependencias necesarias y se activó el entorno para comenzar a trabajar.
 
-Funcionalidades Principales
+## Pasos Realizados
 
-Esta aplicación ofrece las siguientes características clave:
+### 1. Creación del Entorno Virtual
+Se utilizó el módulo `venv` de Python para crear un entorno virtual. Esto permite aislar las dependencias del proyecto y evitar conflictos con otras instalaciones de Python en el sistema.
 
+```bash
+python3 -m venv venv
+```
 
+### 2. Activación del Entorno Virtual
+Una vez creado el entorno virtual, se activó para que las dependencias se instalen en el entorno aislado.
 
+- En sistemas Unix/MacOS:
+    ```bash
+    source venv/bin/activate
+    ```
+- En sistemas Windows:
+    ```bash
+    .\venv\Scripts\activate
+    ```
 
+### 3. Instalación de Dependencias
+Con el entorno virtual activado, se instalaron las dependencias necesarias para el proyecto utilizando `pip`.
 
-Filtrado de Datos: Permite filtrar por:
+```bash
+pip install -r requirements.txt
+```
 
+### 4. Confirmación de la Configuración
+Para verificar que todo estaba correctamente configurado, se comprobó la lista de paquetes instalados y la versión de Python activa.
 
+```bash
+pip list
+python --version
+```
 
+## Notas Adicionales
+- Asegúrate de mantener el archivo `requirements.txt` actualizado con las dependencias necesarias para el proyecto.
+- Recuerda desactivar el entorno virtual cuando termines de trabajar ejecutando `deactivate`.
 
-
-Marca del coche
-
-
-
-Año de registro
-
-
-
-Autonomía (en kilómetros)
-
-
-
-Tipo de carga (rápida, normal, etc.)
-
-
-
-Fecha de registro
-
-
-
-Baterías recicladas (sí/no)
-
-
-
-Edad del dueño
-
-
-
-Visualización de Datos:
-
-
-
-
-
-Tabla dinámica con los datos filtrados.
-
-
-
-Gráficos interactivos que incluyen:
-
-
-
-
-
-Cantidad de autos por marca
-
-
-
-Distribución de autonomía
-
-
-
-Tipos de carga más comunes
-
-
-
-Autonomía promedio por año
-
-
-
-Proporción de baterías recicladas
-
-Requisitos
-
-
-
-
-
-Python 3.x instalado
-
-
-
-Bibliotecas necesarias: streamlit, pandas, plotly
-
-
-
-Archivo CSV: registros_carros_electricos.csv
-
-Cómo Usarlo
-
-Sigue estos pasos para configurar y usar la aplicación:
-
-
-
-
-
-Instalación de Dependencias
-Abre una terminal y ejecuta:
-
-pip install streamlit pandas plotly
-
-
-
-Preparar el Archivo de Datos
-Asegúrate de que el archivo registros_carros_electricos.csv esté en la misma carpeta que el script de la aplicación.
-
-
-
-Ejecutar la Aplicación
-En la terminal, navega a la carpeta del script y escribe:
-
-streamlit run app.py
-
-Esto abrirá la aplicación en tu navegador predeterminado.
-
-
-
-Interactuar con la Aplicación
-
-
-
-
-
-Usa la barra lateral para seleccionar filtros (por ejemplo, marca o año).
-
-
-
-Explora la tabla con los datos filtrados.
-
-
-
-Revisa los gráficos generados automáticamente según tus selecciones.
-
-Ejemplos de Uso
-
-Aquí hay algunos ejemplos prácticos para que veas cómo funciona:
-
-
-
-
-
-Filtrar Coches Tesla de 2023
-En la barra lateral, selecciona "Tesla" en el filtro de marca y "2023" en el filtro de año. La tabla mostrará solo los Tesla registrados en 2023, y los gráficos se actualizarán para reflejar esta selección.
-
-
-
-Analizar Tipos de Carga
-Activa el filtro de "baterías recicladas" y selecciona "Sí". Luego, revisa el gráfico de tipos de carga para ver qué métodos predominan entre los coches con baterías recicladas.
-
-Beneficios
-
-
-
-
-
-Fácil de Usar: Interfaz intuitiva con filtros simples y visualizaciones claras.
-
-
-
-Visual: Gráficos interactivos que facilitan el análisis de datos.
-
-
-
-Directo: Obtén información útil sin complicaciones.
-
-Notas Adicionales
-
-
-
-
-
-Asegúrate de que el archivo CSV tenga las columnas esperadas (marca, año, autonomía, etc.) para que la aplicación funcione correctamente.
-
-
-
-Si necesitas personalizar los gráficos o filtros, puedes modificar el código en app.py.
+¡Con estos pasos, el proyecto está listo para ser desarrollado!
+```
