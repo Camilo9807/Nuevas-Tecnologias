@@ -41,7 +41,6 @@ pip list
 python --version
 ```
 
-.
 
 🔍 Explorando la Aplicación: Filtrado y Visualización de Datos
 Este proyecto ofrece una interfaz interactiva construida con Streamlit para analizar registros de coches eléctricos. A continuación, se describen las funcionalidades principales:
@@ -50,20 +49,35 @@ Este proyecto ofrece una interfaz interactiva construida con Streamlit para anal
 En la barra lateral, encontrarás una serie de filtros interactivos que te permitirán segmentar los datos según tus intereses:
 
 Marca del Auto: Selecciona una o varias marcas de coches eléctricos para enfocar tu análisis.
+
 Año del Modelo: Utiliza un slider para definir el rango de años de los modelos que deseas visualizar.
+
 Autonomía (km): Filtra los coches por su rango de autonomía en kilómetros.
+
 Tipo de Carga: Elige uno o varios tipos de carga para analizar los registros correspondientes.
+
 Fecha de Registro: Selecciona un rango de fechas para analizar los registros dentro de ese período.
+
 Baterías Recicladas: Filtra los coches según si sus baterías son recicladas (Sí/No/Todos).
+
 Edad del Propietario: Utiliza un slider para analizar los registros por el rango de edad de los propietarios.
+
+
 📊 Visualizaciones Interactivas
 Una vez que hayas aplicado los filtros, la aplicación mostrará un DataFrame con los datos filtrados y varias visualizaciones interactivas para ayudarte a comprender las tendencias:
 
 Autos por Marca (Expandible): Un gráfico de barras que muestra el número de coches por cada marca seleccionada.
+
 Distribución de Autonomía (Expandible): Un histograma que muestra la distribución de la autonomía en kilómetros de los coches filtrados.
+
 Distribución de Tipos de Carga (Expandible): Un gráfico de pastel que muestra la proporción de cada tipo de carga entre los coches filtrados.
+
 Autonomía vs. Año del Modelo (Expandible): Un gráfico de dispersión que relaciona la autonomía de los coches con su año de modelo, permitiendo identificar tendencias a lo largo del tiempo. Al pasar el cursor, se muestra la marca y el modelo del auto.
+
 Baterías Recicladas (Expandible): Un gráfico de barras que compara la cantidad de coches con baterías recicladas y no recicladas.
+
+
+
 ⚠️ Advertencia
 Si no hay datos que coincidan con los filtros seleccionados, se mostrará una advertencia indicando que no hay información disponible.
 
